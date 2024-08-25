@@ -1,17 +1,17 @@
 import { type ReactElement } from "react";
-import { Link, Route, Switch } from "wouter";
+import { Route, Switch } from "wouter";
+import { Header } from "../components/Header";
 import { About } from "./about";
+import { Index } from "./index";
 
 export function App(): ReactElement {
   return (
     <>
-      <Link to="/about">About</Link>
+      <Header />
       <br />
       <Switch>
-        <Route path="/">Home</Route>
-        <Route component={About} path="/about">
-          About
-        </Route>
+        <Route component={Index} path="/" />
+        <Route component={About} path="/about" />
         <Route>404, Not Found!</Route>
       </Switch>
     </>
