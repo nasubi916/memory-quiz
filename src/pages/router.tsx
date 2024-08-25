@@ -1,8 +1,8 @@
 import { type ReactElement } from "react";
 import { Route, Switch } from "wouter";
-import { Header } from "../components/Header";
 import { About } from "./about";
 import { Index } from "./index";
+import { Header } from "@/components/header";
 
 export function App(): ReactElement {
   return (
